@@ -31,7 +31,7 @@ def main():
         args.learned_loss = False
         args.num_steps = 50
         target = nonadaptivea3c_val if args.eval else nonadaptivea3c_train
-    else:
+    else: # args.model == "SAVN"
         args.learned_loss = True
         args.num_steps = 6
         target = savn_val if args.eval else savn_train
